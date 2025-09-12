@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ApplicationModal from '../components/ApplicationModal';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
@@ -18,11 +18,22 @@ export default function Home() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen]);
+
   return (
-    <div className="text-gray-800 font-sans antialiased">
+    <div className="bg-[#FFFCF5] text-gray-800 font-sans antialiased">
       {isModalOpen && <ApplicationModal onClose={closeModal} />}
       
-      <div className={`${isModalOpen ? 'blur-sm' : ''}`}>
+      <div className={`${isModalOpen ? 'blur-sm pointer-events-none' : ''}`}>
         <div className="relative">
           <Header onSignUpClick={openModal} />
           <HeroSection onClaimClick={openModal} />
