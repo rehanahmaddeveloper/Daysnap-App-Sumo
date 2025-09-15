@@ -10,7 +10,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onClaimClick }) => {
       className="pt-40 pb-20 bg-[url('/hero-background.png')] bg-cover bg-center bg-no-repeat"
     >
       <div className="container mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-3xl md:text-4xl font-bold leading-tight text-[#414141]">
               Get Lifetime<br />

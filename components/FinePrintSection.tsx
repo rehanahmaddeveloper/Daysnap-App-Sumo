@@ -12,7 +12,7 @@ const FinePrintSection = () => {
     return (
         <section className="py-20 sm:py-24 bg-[#FBFBFB]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-x-16 gap-y-12 items-center">
+                <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12 items-center">
                     {/* Left Column */}
                     <div className="space-y-6">
                         <p className="text-primary-500 font-semibold tracking-wider">TERMS & CONDITIONS</p>
